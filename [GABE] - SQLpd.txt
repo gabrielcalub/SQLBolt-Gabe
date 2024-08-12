@@ -1,0 +1,62 @@
+Challenge 1:
+
+1. SELECT * FROM mailing_list;
+
+2. An illegal site's servers were seized in a recent operation. Please submit all users' details. 
+
+Answer:
+SELECT * FROM users;
+
+3. A hacked site members' details have surfaced on a darknet forum. Please submit all members addresses, usernames and names' details.
+
+Answer: SELECT Address, Username, Name
+FROM members;
+
+4. An illegal site's servers were seized in a recent operation. Please submit all users number of downloads and emails' details.
+
+Answer: SELECT Downloads, Email
+FROM users;
+
+5. An illegal site's servers were seized in a recent operation. Please submit all users emails' details.
+Please make sure there are no duplicates.
+
+Answer: SELECT DISTINCT Email
+FROM users;
+
+6. An illegal site's servers were seized in a recent operation. Please submit all users' details sorted by last names in ascending order.
+
+Answer: SELECT *
+FROM users
+ORDER BY LastName ASC;
+
+7. A mailing list of an illegal online service was sent to the SQLPD hot-line. Please submit all entries' details sorted by number of promotions sent in descending order.
+
+Answer: SELECT *
+FROM mailing_ list
+ORDER BY PromotionsSent DESC;
+
+8. An illegal site's servers were seized in a recent operation. Please submit all users emails, given names and last access times' details sorted by emails in descending order. Please make sure there are no duplicates.
+
+Answer: SELECT DISTINCT Email, GivenName, LastAccess
+FROM users
+ORDER BY Email DESC;
+
+9. A hacked site members' details have surfaced on a darknet forum. Please submit all members hashed passwords and addresses' details sorted by hashed passwords in descending order and then by addresses in descending order.
+
+Answer: Select Hashedpassword, Address
+From users
+ORDER BY Hashedpassword DESC, Address DESC;
+
+10. A mailing list of an illegal online service was sent to the SQLPD hot-line. Please submit the top 20 records' details when sorted by join dates in ascending order and then by email addresses in descending order.
+
+Answer: SELECT *
+FROM mailing_ list
+ORDER BY JoinDate ASC, EmailAddress DESC
+LIMIT 20;
+
+11. An illegal site's servers were seized in a recent operation. Please submit the top 10 users first names and email addresses' details when sorted by email addresses in descending order and then by first names in ascending order. Please make sure there are no duplicates.
+
+Answer: SELECT DISTINCT FirstName, EmailAddress
+FROM users
+ORDER BY EmailAddress DESC, FirstName ASC
+LIMIT 10;
